@@ -1,0 +1,81 @@
+#Bordes{
+    border-top-right-radius: 40% 90% !important;
+    border-bottom-right-radius: 40% 90% !important;
+    border-top-left-radius: 0% 0% !important;
+    border-bottom-left-radius: 0% 0% !important;   
+}
+#Titulo{
+    font-size: 40px;
+    font-weight: 600;
+    
+    font-family: 'Red Hat Display', sans-serif;
+}
+#pestudio1,#pestudio2,#pestudio3{
+    margin-bottom: 0px;
+}
+#pdatosest1,#pdatosest2,#pdatosest3,#localidadtrabajo1,#localidadtrabajo2,#localidadtrabajo3,#localidadtrabajo4{
+    font-style: italic;
+    font-size: small;
+}
+#contenedorseparador{
+    padding: 1px !important;
+    margin: 0px 0px 20px 10px !important;
+}
+#puestotrabajo4,#puestotrabajo3,#puestotrabajo2,#puestotrabajo1{
+    font-weight: bold;
+}
+#Profesion{
+    font-size: 20px;
+    font-style: italic;
+    font-family: 'Red Hat Display', sans-serif;
+}
+#Empleadortrabajo4,#Empleadortrabajo3,#Empleadortrabajo2,#Empleadortrabajo1{
+    font-weight: bold;
+    margin-bottom: 0px !important;
+}
+#Bienvenida{
+    text-align: center !important;
+}
+#subtitulo{
+    font-style: italic;
+    text-decoration: underline;
+}
+#pdomicilio{
+    margin-bottom: 0%;
+}
+@media only screen and (max-width: 768px) {
+    #Bordes{
+        border-top-right-radius: 00% 00% !important;
+        border-bottom-right-radius: 00% 00% !important;
+        border-top-left-radius: 0% 0% !important;
+        border-bottom-left-radius: 0% 0% !important;
+        background-color: white !important;  
+    }
+    #divdeimagen{
+        background-color: white !important;
+    }
+    #Titulo{
+        background-color: white;
+        text-align: center;
+        color: black !important;
+    }
+    #divalpedo{
+        display: none;
+    }
+    #Profesion{
+        text-align: center !important;
+        background-color: white !important;
+        color: black !important;
+        width: 100% !important;
+    }
+    #salto1{
+        display: none;
+    } 
+
+    #datospersonales{
+        width: 100% !important;
+    }
+    #informacionlaboral{
+        width: 100% !important;
+    }
+}

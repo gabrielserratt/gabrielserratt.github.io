@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreatuCV</title>
+    <link rel="stylesheet" href="CTCV.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3789/3789958.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Página de bienvenida -->
+
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#" disabled> 
+            <img src="https://cdn-icons-png.flaticon.com/512/3789/3789958.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            
+            <span class="navbar-text">CreatuCV</span> 
+        </a>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid" id="barranavegacion" style="display: none;">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                    <a class="nav-link" href="#" id="menua1">Paso #1</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#" id="menua2">Paso #2</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#" id="menua3">Paso #3</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </nav>
+    <div class="row">
+        <div class="col-sm-8"> 
+            <h2 id="Bienvenida">Bienvenido! Crea tu propio CV con estilo profesional &#129299</h2>
+        </div>
+        <div class="col-sm-4">
+            <button id="cambiamos" type="button" class="btn btn-info btn-sm" style="display: none;">&#9997 ¿No te gusta? Volvamos a cambiarlo</button>
+        </div>
+    </div>
+    <!--La tarjeta para el inicio-->
+    
+    <div id="principal" class="card text-center">
+        <div class="card-header">
+            CreatuCV
+        </div>
+        
+        <div class="card-body">
+            
+            <img class="card-img-top" style="width: 200px;"  src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Card image">
+            <h5 class="card-title">Tu foto y tu nombre</h5>
+            <p class="card-text">Mas toda la información adicional para crear el mejor CV.</p>
+            <button type="button" id="go" href="#" class="btn btn-primary">Alla vamos!</button>
+        </div>
+        <div class="card-footer text-muted">
+            No te preocupes, nosotros te vamos a acompañar.
+        </div>
+    </div>
+    
+
+    <!-- Página de creación-->
+    <div class="container bg-dark text-white p-2" id="crearavatar" style="display: none;">
+        <h5>Antes de empezar, seleccionemos un avatar: </h5>
+        <form>
+            <div class="container row">
+                <div class="col-8" id="listaavatares">
+                  
+                    
+                    <img src="https://randomuser.me/api/portraits/lego/8.jpg" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
+                    <input   type="radio" name="avatarcito" id="img1">
+                
+                
+                    <img src="https://cdn-icons-png.flaticon.com/512/2926/2926737.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
+                    <input  type="radio" name="avatarcito" id="img2">
+                
+                
+                    <img src="https://cdn-icons-png.flaticon.com/512/201/201634.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
+                    <input  type="radio" name="avatarcito" id="img3">
+                
+                
+                    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
+                    <input  type="radio" name="avatarcito" id="img4">
+                
+                    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
+                    <input  type="radio" name="avatarcito" id="img6">
+                
+                </div>
+                <br><br><br>
+
+                <div>
+                    <h6>O puedes subir tu foto:</h6>
+                    <div class="input-group mb-3">
+                        
+                        <input type="text" class="form-control" placeholder="Inserter URL de la imagen" id="Nuevafoto" >
+                        <button id="Adjfotografia" class="btn btn-success" type="button" >&#128206</button>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+        <div class="d-grid">
+            <button type="button" class="btn btn-primary  " id="Vamos">¡Listo! Avatar seleccionado</button>
+        </div>
+    </div>
+    
+    <div id="accordion" style="display: none;">
+        
+        <div id="1raparte" class="card">
+            <div class="card-header" id="headingOne">
+                    <!-- Datos personales -->
+                    <a class="btn btn-dark" data-bs-toggle="collapse" id="paso1">
+                    Paso #1 - Tus datos personales
+                    </a>
+                    
+            </div>
+            <div id="collapseOne" >
+                <div class="card-body">
+                    <form>
+                        
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group col-md-6">
+                                    <div class="input-group mb-2 mr-sm-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">Nombre/s</div>
+                                        </div>
+                                        <input type="Text" class="form-control" id="Nombre">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Apellido/s</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="Apellido" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Fecha de Nacimiento:</div>
+                                            </div>
+                                            <input type="date" class="form-control" id="fecnacimiento" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">¿Tíenes un título?</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="comoledicen" >
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="row">
+                                    <div class="form-group col-md-3">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Tipo de Documento</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="TipoDoc" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <div class="form-group col-md-6">
+                                            <div class="input-group mb-2 mr-sm-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">N° de Documento</div>
+                                                </div>
+                                                <input type="Text" class="form-control" id="DNI" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <h6>Datos de Contacto Virtual</h6>
+                                    
+                                    <div class="form-group col-md-2">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Cod.País</div>
+                                            </div>
+                                            <input type="text" class="form-control" id="Codpais" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Cod.Area</div>
+                                            </div>
+                                            <input type="text" class="form-control" id="Codarea" >
+                                        </div>                                    
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <div class="form-group col-md-6">
+                                            <div class="input-group mb-2 mr-sm-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">N°Celular</div>
+                                                </div>
+                                                <input type="text" class="form-control" id="Celular" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"> e-mail</div>
+                                            </div>
+                                            <input type="email" class="form-control" id="mail" >
+                                        </div>                                   
+                                    </div>
+
+                                    <h6>Datos de Contacto Físico</h6>
+                                    
+                                        <div class="form-group col-md-4">
+                                            <div class="input-group mb-2 mr-sm-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">Calle</div>
+                                                </div>
+                                                <input type="Text" class="form-control" id="Calle" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <div class="form-group col-md-6">
+                                                <div class="input-group mb-2 mr-sm-2">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">Altura</div>
+                                                    </div>
+                                                    <input type="Text" class="form-control" id="Altura" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <label for="espacio"></label>
+                                    <div class="form-group col-md-4">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Ciudad</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="Ciudad" >
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <div class="form-group col-md-6">
+                                            <div class="input-group mb-2 mr-sm-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">CP</div>
+                                                </div>
+                                                <input type="text" class="form-control" id="CP" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label for="espacio"></label>
+                                    <div class="form-group col-md-6">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Provincia</div>
+                                            </div>
+                                            <input type="text" class="form-control" id="Provincia" >
+                                        </div>                                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" id="Paso1a2" class="btn btn-success btn-sm col-md-3">Continuar con el siguiente paso</button>
+                        <span id="faltapaso1" class="badge rounded-pill bg-warning" style="display: none;">Falta uno o mas datos</span>
+                        <button id="volveralavatar" type="button" class="btn btn-light btn-sm">&#128314 Quiero cambiar foto</button>
+                    </form>
+                    </div>
+                
+            </div>
+        </div>
+        
+            <!-- Segunda parte - Experiencia laboral-->
+        <div id="2daparte" class="card" style="display: none;">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                <button class="btn btn-dark" data-bs-toggle="collapse" id="paso2">
+                    Paso #2 - Experiencia laboral 
+                </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" style="display: none;">
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <h5>Ultimo Empleo / Empleo Actual</h5>
+                                <div class="form-group col-md-6">
+                                    <div class="input-group mb-2 mr-sm-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">Puesto/Cargo</div>
+                                        </div>
+                                        <input type="Text" class="form-control" id="Cargo1" placeholder="Administrativo">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Empleador</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="Empleador1" placeholder="EA Sports">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Localidad</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="localidad1" placeholder="CABA">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Desde</div>
+                                            </div>
+                                            <input type="date" class="form-control" id="Desde1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Hasta</div>
+                                            </div>
+                                            <input type="date" class="form-control" id="Hasta1">
+                                            
+                                            <div>
+                                                    <div class="input-group-text">
+                                                        <input type="checkbox" id="Actualtrabajo">
+                                                        <label for="Actual"> Actualmente</label>
+                                                    </div>
+                                                </div>                                               
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Descripción de tareas realizadas</div>
+                                            </div>
+                                        </div>
+                                        <textarea name="Tareas1" id="Tarea1" cols="80" rows="2"></textarea>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+            <!-- Segundo puesto de trabajo-->
+            <form id="Empleo2" style="display: none;">
+                <div class="row">
+                    <div class="col">
+                        <h5>2° Empleo a cargar</h5>
+                        <div class="form-group col-md-6">
+                            <div class="input-group mb-2 mr-sm-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Puesto/Cargo</div>
+                                </div>
+                                <input type="Text" class="form-control" id="Cargo2" placeholder="Puesto">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Empleador</div>
+                                    </div>
+                                    <input type="Text" class="form-control" id="Empleador2" placeholder="Nombre del empleador">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Localidad</div>
+                                    </div>
+                                    <input type="Text" class="form-control" id="localidad2" placeholder="Localidad">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Desde</div>
+                                    </div>
+                                    <input type="date" class="form-control" id="Desde2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Hasta</div>
+                                    </div>
+                                    <input type="date" class="form-control" id="Hasta2">                                              
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Descripción de tareas realizadas</div>
+                                    </div>
+                                </div>
+                                <textarea name="Tareas2" id="Tarea2" cols="80" rows="2"></textarea>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- Tercer puesto de trabajo-->
+            <form id="Empleo3" style="display: none;">
+                <div class="row">
+                    <div class="col">
+                        <h5>3° Empleo a cargar</h5>
+                        <div class="form-group col-md-6">
+                            <div class="input-group mb-2 mr-sm-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Puesto/Cargo</div>
+                                </div>
+                                <input type="Text" class="form-control" id="Cargo3" placeholder="Puesto">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Empleador</div>
+                                    </div>
+                                    <input type="Text" class="form-control" id="Empleador3" placeholder="Nombre del empleador">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Localidad</div>
+                                    </div>
+                                    <input type="Text" class="form-control" id="localidad3" placeholder="Localidad">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Desde</div>
+                                    </div>
+                                    <input type="date" class="form-control" id="Desde3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Hasta</div>
+                                    </div>
+                                    <input type="date" class="form-control" id="Hasta3">                                               
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Descripción de tareas realizadas</div>
+                                    </div>
+                                </div>
+                                <textarea name="Tareas3" id="Tarea3" cols="80" rows="2"></textarea>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- Cuarto empleo-->
+            <form id="Empleo4" style="display: none;">
+                <div class="row">
+                    <div class="col">
+                        <h5>4° Empleo a cargar</h5>
+                        <div class="form-group col-md-6">
+                            <div class="input-group mb-2 mr-sm-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Puesto/Cargo</div>
+                                </div>
+                                <input type="Text" class="form-control" id="Cargo4" placeholder="Puesto">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Empleador</div>
+                                    </div>
+                                    <input type="Text" class="form-control" id="Empleador4" placeholder="Nombre del empleador">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Localidad</div>
+                                    </div>
+                                    <input type="Text" class="form-control" id="localidad4" placeholder="Localidad">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Desde</div>
+                                    </div>
+                                    <input type="date" class="form-control" id="Desde4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Hasta</div>
+                                    </div>
+                                    <input type="date" class="form-control" id="Hasta4">                                               
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Descripción de tareas realizadas</div>
+                                    </div>
+                                </div>
+                                <textarea name="Tareas3" id="Tarea4" cols="80" rows="2"></textarea>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <button type="button" id="AgregarEmpleo1" class="btn btn-primary">&#10133 Agregar Empleo</button>
+            <button type="button" id="QuitarEmpleo1" class="btn btn-secondary" style="display: none;">&#10134 Quitar Empleo</button>
+            <button type="button" id="Paso2a3" class="btn btn-success">Pasar al último paso</button>
+            <button id="volver1" class="btn btn-light btn-sm">&#128314 Volver al Paso #1</button>
+        </div>
+    </div>
+        </div>
+
+        <div id="3raparte" style="display: none;" class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-dark" data-bs-toggle="collapse" id="paso3">
+                Paso #3 - Tus datos académicos e intereses personales
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" style="display: none;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <div class="input-group mb-2 mr-sm-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Realiza una descripción de tus aptitudes y objetivos</div>
+                            </div>
+                        </div>
+                        <textarea name="Tareas3" id="objetivos" cols="80" rows="5"></textarea>
+                    </div>
+                </div>
+                <h1 id="espacio2"></h1>
+                    <form id="Secundaria">
+                        <div class="row">
+                            <div class="col">
+                                <h5>Datos académicos</h5>
+                                <div class="form-group col-md-6">
+                                    <div class="input-group mb-2 mr-sm-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">Título</div>
+                                        </div>
+                                        <input type="Text" class="form-control" id="Estudio1" placeholder="Abogado">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Instituto Educativo</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="Instituto" placeholder="Nombre del centro educativo">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Localidad</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="locAcade1" placeholder="Localidad">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Desde</div>
+                                            </div>
+                                            <input type="date" class="form-control" id="DesAcade1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Hasta</div>
+                                            </div>
+
+                                            <input type="date" class="form-control" id="HasAcade1">
+                                            <div>
+                                                <div class="input-group-text">
+                                                    <input type="checkbox" id="Actualestudio">
+                                                    <label for="Encurso"> En curso</label>
+                                                </div>
+                                            </div> 
+                                            </div>                    
+                                                                       
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        
+                    </form>
+                    <!--2do estudio-->
+                    <form id="Secundaria2" style="display: none;">
+                        <div class="row">
+                            <div class="col">
+                                <h5>2° Dato académico</h5>
+                                <div class="form-group col-md-6">
+                                    <div class="input-group mb-2 mr-sm-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">Título</div>
+                                        </div>
+                                        <input type="Text" class="form-control" id="Estudio2" placeholder="Título obtenido">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Instituto Educativo</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="Instituto2" placeholder="Nombre del centro educativo">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Localidad</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="locAcade2" placeholder="Localidad">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Desde</div>
+                                            </div>
+                                            <input type="date" class="form-control" id="DesAcade2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Hasta</div>
+                                            </div>
+                                            <input type="date" class="form-control" id="HasAcade2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--3er estudio-->
+                    <form id="Secundaria3" style="display: none;">
+                        <div class="row">
+                            <div class="col">
+                                <h5>3° Dato académico</h5>
+                                <div class="form-group col-md-6">
+                                    <div class="input-group mb-2 mr-sm-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">Título</div>
+                                        </div>
+                                        <input type="Text" class="form-control" id="Estudio3" placeholder="Título obtenido">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Instituto Educativo</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="Instituto3" placeholder="Nombre del centro educativo">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Localidad</div>
+                                            </div>
+                                            <input type="Text" class="form-control" id="locAcade3" placeholder="Localidad">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Desde</div>
+                                            </div>
+                                            <input type="date" class="form-control" id="DesAcade3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Hasta</div>
+                                            </div>
+                                            <input type="date" class="form-control" id="HasAcade3">
+                                        </div>                                               
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                        <button type="button" id="AgregarEstudio1" class="btn btn-primary">&#10133 Agregar Estudio</button>
+                        <button type="button" id="QuitarEstudio1" class="btn btn-secondary" style="display: none;">&#10134 Quitar Estudio</button>
+                        <button type="button" id="Listo" class="btn btn-success">Completar mi CV</button>
+                        <button id="volver2" class="btn btn-light btn-sm">&#128314 Volver al Paso #2</button>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+
+
+    <!-- Página de resultado -->
+    <br><br><br>
+    <div id="Resultado" style="display: none;">
+       
+        <div id="principal1" >
+
+            <div class="row" id="tofcv" >
+                <div id="divdeimagen" class="col-md-4 bg-dark" >
+                    <img id="imagenfinal" class="rounded-circle mx-auto d-block img-thumbnail" alt="La foto no pudo ser obtenida" style="width: 200px; height: 200px;"  src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="No se pudo cargar la imagen, puedes volver a intertanlo">
+                </div>
+                <div id="Bordes" class="col-md-6 bg-dark">
+                    <br id="salto1"><br id="salto2">
+                    <h1 id="Titulo" class="card-title text-light"> Nombre del chabon </h1>
+                    <h2 id="Profesion" class="badge text-light bg-secondary"> Profesión </h2>
+                </div>
+                <div class="col" id="divalpedo">
+                   
+                </div>
+            </div>
+          
+        </div>
+        <div class="row">
+            <div class="col-4" id="datospersonales">
+                <div class="container p-5 my-5 bg-primary text-white" >
+                    <h3 class="" id="subtitulo">Datos Personales</h3>
+                    <br>
+                    <h6 class="badge bg-dark">Fecha de Nacimiento:</h6>
+                    <h5 id="pnacimiento">123456</h5>
+                    <h6 id="ptipodni" class="badge bg-dark">DNI</h6>
+                    <h5 id="PDNI">123456</h5>
+                    <h6 class="badge bg-dark">Movil</h6>
+                    <h5 id="pnmovil" >1168162534</h5>
+                    <h6 class="badge bg-dark">e-mail</h6>
+                    <h5 id="pemial">nombre@gmail.com</h5>
+                    <h6 class="badge bg-dark">Domicilio</h6>
+                    <h5 id="pdomicilio">Deheza 1234 </h5>
+                    <h6 id="ploccpprov">Lanus (1824) - Buenos Aires</h6>
+                </div>
+                <div class="container p-5 my-5 bg-success text-white">
+                    <h3 id="subtitulo">Datos Académicos</h3>
+                    <br>
+                    <div id="1erestudio">
+                        <h3 id="pestudio1">&#127891 Verdulero - UBA</h3>
+                        <h6 id="pdatosest1">CABA - 1/12/13</h6>
+                    </div>
+                    <br>
+                    <div id="2doestudio" style="display: none;">
+                        <h4 id="pestudio2">Curso Word - Academia Correo</h4>
+                        <h6 id="pdatosest2">Lanus - 23/5/22</h6>
+                    </div>
+                    <br>
+                    <div id="3erestudio" style="display: none;">
+                        <h4 id="pestudio3">Curso Word - Academia Correo</h4>
+                        <h6 id="pdatosest3">Lanus - 23/5/22</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8" id="informacionlaboral">
+                <br><br>
+                <div>
+                    <div class="container border">
+                        <h2 id="subtitulo">Sobre mí</h2>
+                        <p id="sobremi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at diam non purus condimentum ultrices in vel dui. Vestibulum malesuada, neque et sagittis sagittis, mauris dolor lacinia dolor, eget sollicitudin augue nisi porta dui. Aenean venenatis placerat dapibus. Nam at nisi eget velit malesuada sagittis eget id ante. Ut ante massa, imperdiet ut diam suscipit, consequat pretium dui. Nunc ornare velit nulla, ac ullamcorper nibh finibus at. Quisque venenatis fringilla sapien a aliquet. Donec at semper leo. Pellentesque at eros iaculis tortor molestie tristique in eu leo. Donec vel vestibulum elit.</p>
+                    </div>
+                    <br>
+                    <div class="container border">
+                        <br>   
+                        <h2 id="subtitulo">Experiencia Laboral</h2>
+                    <br>
+                    <!-- Trabajo 1-->
+                    
+                        <form id="trab1">
+                            <div class="row">
+                            <h3 id="Empleadortrabajo1">CachoSA</h3>
+                            <h6 id="localidadtrabajo1">Localidad</h6>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <span id="desdetrabajo1" class="badge rounded-pill bg-dark">Dark</span>
+                                </div>
+                                <br>
+                                <div class="col-3">
+                                    <span id="hastatrabajo1" class="badge rounded-pill bg-dark">Dark</span>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h4>Puesto:</h4>
+                                </div>
+                                <div class="col-10">
+                                    <h4 id="puestotrabajo1"> Vigilante</h4>    
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-2">
+                                    <p> <b>Tareas realizadas</b> </p>
+                                </div>
+                                <div class="col-10">
+                                    <p id="tareaempleo1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at diam non purus condimentum ultrices in vel dui. Vestibulum malesuada, neque et sagittis sagittis, mauris dolor lacinia dolor, eget sollicitudin augue nisi porta dui. Aenean venenatis placerat dapibus. Nam at nisi eget velit malesuada sagittis eget id ante. Ut ante massa, imperdiet ut diam suscipit, consequat pretium dui. Nunc ornare velit nulla, ac ullamcorper nibh finibus at. Quisque venenatis fringilla sapien a aliquet. Donec at semper leo. Pellentesque at eros iaculis tortor molestie tristique in eu leo. Donec vel vestibulum elit.</p>
+                                </div>
+                            </div>
+                            
+                        </form>
+                        <!-- Trabajo 2-->
+                      
+                        <form id="trab2" style="display: none;">
+                            <br>
+                            <div id="contenedorseparador" class="container p-1 bg-warning col-5" ></div>
+                            <h3 id="Empleadortrabajo2">Cacho2SA</h3>
+                            <h6 id="localidadtrabajo2">Localidad</h6>
+                            <div class="row">
+                                <div class="col-2">
+                                    <span id="desdetrabajo2" class="badge rounded-pill bg-dark">Dark</span>
+                                </div>
+                                <br>
+                                <div class="col-3">
+                                    <span id="hastatrabajo2" class="badge rounded-pill bg-dark">Dark</span>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h4>Puesto:</h4>
+                                </div>
+                                <div class="col-10">
+                                    <h4 id="puestotrabajo2"> Vigilante</h4>    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <p> <b>Tareas realizadas</b> </p>
+                                </div>
+                                <div class="col-10">
+                                    <p id="tareaempleo2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at diam non purus condimentum ultrices in vel dui. Vestibulum malesuada, neque et sagittis sagittis, mauris dolor lacinia dolor, eget sollicitudin augue nisi porta dui. Aenean venenatis placerat dapibus. Nam at nisi eget velit malesuada sagittis eget id ante. Ut ante massa, imperdiet ut diam suscipit, consequat pretium dui. Nunc ornare velit nulla, ac ullamcorper nibh finibus at. Quisque venenatis fringilla sapien a aliquet. Donec at semper leo. Pellentesque at eros iaculis tortor molestie tristique in eu leo. Donec vel vestibulum elit.</p>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <!-- Trabajo 3-->
+                        <form id="trab3" style="display: none;">
+                            <br>
+                            <div id="contenedorseparador" class="container p-1 bg-warning col-5" ></div>
+                            <h3 id="Empleadortrabajo3">Cacho2SA</h3>
+                            <h6 id="localidadtrabajo3">Localidad</h6>
+                            <div class="row">
+                                <div class="col-2">
+                                    <span id="desdetrabajo3" class="badge rounded-pill bg-dark">Dark</span>
+                                </div>
+                                <br>
+                                <div class="col-3">
+                                    <span id="hastatrabajo3" class="badge rounded-pill bg-dark">Dark</span>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h4>Puesto:</h4>
+                                </div>
+                                <div class="col-10">
+                                    <h4 id="puestotrabajo3"> Vigilante</h4>    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <p> <b>Tareas realizadas</b> </p>
+                                </div>
+                                <div class="col-10">
+                                    <p id="tareaempleo3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at diam non purus condimentum ultrices in vel dui. Vestibulum malesuada, neque et sagittis sagittis, mauris dolor lacinia dolor, eget sollicitudin augue nisi porta dui. Aenean venenatis placerat dapibus. Nam at nisi eget velit malesuada sagittis eget id ante. Ut ante massa, imperdiet ut diam suscipit, consequat pretium dui. Nunc ornare velit nulla, ac ullamcorper nibh finibus at. Quisque venenatis fringilla sapien a aliquet. Donec at semper leo. Pellentesque at eros iaculis tortor molestie tristique in eu leo. Donec vel vestibulum elit.</p>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Trabajo 4-->
+                        <form id="trab4" style="display: none;">
+                            <br>
+                            <div id="contenedorseparador" class="container p-1 bg-warning col-5" ></div>
+                            <h3 id="Empleadortrabajo4">Cacho2SA</h3>
+                            <h6 id="localidadtrabajo4">Localidad</h6>
+                            <div class="row">
+                                <div class="col-2">
+                                    <span id="desdetrabajo4" class="badge rounded-pill bg-dark">Dark</span>
+                                </div>
+                                <br>
+                                <div class="col-3">
+                                    <span id="hastatrabajo4" class="badge rounded-pill bg-dark">Dark</span>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h4>Puesto:</h4>
+                                </div>
+                                <div class="col-10">
+                                    <h4 id="puestotrabajo4"> Vigilante</h4>    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <p> <b>Tareas realizadas</b> </p>
+                                </div>
+                                <div class="col-10">
+                                    <p id="tareaempleo4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at diam non purus condimentum ultrices in vel dui. Vestibulum malesuada, neque et sagittis sagittis, mauris dolor lacinia dolor, eget sollicitudin augue nisi porta dui. Aenean venenatis placerat dapibus. Nam at nisi eget velit malesuada sagittis eget id ante. Ut ante massa, imperdiet ut diam suscipit, consequat pretium dui. Nunc ornare velit nulla, ac ullamcorper nibh finibus at. Quisque venenatis fringilla sapien a aliquet. Donec at semper leo. Pellentesque at eros iaculis tortor molestie tristique in eu leo. Donec vel vestibulum elit.</p>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="CTCV.js"></script>
+
+
+
+</body>
+</html>
