@@ -129,7 +129,7 @@ document.getElementById('go').addEventListener('click', function(){
 
 /**Eligiendo avatar - Varios pasos*/
 document.getElementById('img1').addEventListener('click', function(){
-    document.getElementById('imagenfinal').src="https://randomuser.me/api/portraits/lego/8.jpg";
+    document.getElementById('imagenfinal').src="https://cdn-icons-png.flaticon.com/512/4489/4489103.png";
     document.getElementById('imagen1').style.backgroundColor = "#63fd06";
     document.getElementById('fotovalida').style.display = "none";
     document.getElementById('Adjfotografia').innerHTML = "&#129312 Cargar mi foto";
@@ -146,7 +146,7 @@ document.getElementById('img1').addEventListener('click', function(){
     foto = 0;
 })
 document.getElementById('img2').addEventListener('click', function(){
-    document.getElementById('imagenfinal').src="https://cdn-icons-png.flaticon.com/512/2926/2926737.png";
+    document.getElementById('imagenfinal').src="https://cdn3.iconfinder.com/data/icons/star-wars-color/175/jango-fett-512.png";
     foto = 0;
     document.getElementById('Vamos').disabled = false;
     document.getElementById('imagen1').className = "rounded-circle";
@@ -162,7 +162,7 @@ document.getElementById('Adjfotografia').innerHTML = "&#129312 Cargar mi foto";
     document.getElementById('imagen2').style.backgroundColor = "#63fd06";
 })
 document.getElementById('img3').addEventListener('click', function(){
-    document.getElementById('imagenfinal').src="https://cdn-icons-png.flaticon.com/512/201/201634.png";
+    document.getElementById('imagenfinal').src="https://cdn-icons-png.flaticon.com/512/7642/7642660.png";
     foto = 0;
     document.getElementById('Vamos').disabled = false;
     document.getElementById('imagen1').className = "rounded-circle";
@@ -179,7 +179,7 @@ document.getElementById('img3').addEventListener('click', function(){
     document.getElementById('imagen3').style.backgroundColor = "#63fd06";
 })
 document.getElementById('img4').addEventListener('click', function(){
-    document.getElementById('imagenfinal').src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png";
+    document.getElementById('imagenfinal').src="https://cdn-icons-png.flaticon.com/512/2829/2829660.png";
     foto = 0;
     document.getElementById('Vamos').disabled = false;
     document.getElementById('imagen1').className = "rounded-circle";
@@ -196,7 +196,7 @@ document.getElementById('img4').addEventListener('click', function(){
     document.getElementById('Adjfotografia').innerHTML = "&#129312 Cargar mi foto";
 })
 document.getElementById('img6').addEventListener('click', function(){
-    document.getElementById('imagenfinal').src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png";
+    document.getElementById('imagenfinal').src="https://www.latercera.com/resizer/FUG8VnY_arO32Nh9xWqNzVK-rng=/768x0/smart/filters:quality(70):format(webp):no_upscale()/cloudfront-us-east-1.images.arcpublishing.com/copesa/DUJCEZ325JBCHK6DKP6OKWYUUY.jpeg";
     foto = 0;
     document.getElementById('Vamos').disabled = false;
     document.getElementById('imagen1').className = "rounded-circle";
