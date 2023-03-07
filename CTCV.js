@@ -1,6 +1,8 @@
 let colapso;
 let colapso1;
 let colapso2;
+let avatar;
+let foto;
 let empleos;
 let empleos2;
 let estudio;
@@ -17,6 +19,7 @@ colapso=0;
 colapso1=0;
 colapso2=0;
 let Npersona;
+let NNacionalidad;  
 let NCompleto;
 let NApellido;
 let NTDNI;
@@ -117,8 +120,6 @@ adjfoto1 = 0;
 DefHastaestudio1 = 0;
 
 
-
-
 /** Funcion: Pasar a armar curriculum*/
 document.getElementById('go').addEventListener('click', function(){
     document.getElementById('Bienvenida').innerHTML="Vamos a crear nuestro CV";
@@ -129,18 +130,87 @@ document.getElementById('go').addEventListener('click', function(){
 /**Eligiendo avatar - Varios pasos*/
 document.getElementById('img1').addEventListener('click', function(){
     document.getElementById('imagenfinal').src="https://randomuser.me/api/portraits/lego/8.jpg";
+    document.getElementById('imagen1').style.backgroundColor = "#63fd06";
+    document.getElementById('fotovalida').style.display = "none";
+    document.getElementById('Adjfotografia').innerHTML = "&#129312 Cargar mi foto";
+    document.getElementById('imagen1').className = "img-thumbnail";
+    document.getElementById('imagen2').className = "rounded-circle";
+    document.getElementById('imagen3').className = "rounded-circle";
+    document.getElementById('imagen4').className = "rounded-circle";
+    document.getElementById('imagen6').className = "rounded-circle";
+    document.getElementById('Nuevafoto').style.backgroundColor = "white";
+    document.getElementById('Nuevafoto').value = '';
+    document.getElementById('imagen2').style.backgroundColor = "black";
+    document.getElementById('Vamos').disabled = false;
+    document.getElementById('Vamos').innerHTML = "Ya elegiste tu avatar &#128040. Continuemos!"
+    foto = 0;
 })
 document.getElementById('img2').addEventListener('click', function(){
     document.getElementById('imagenfinal').src="https://cdn-icons-png.flaticon.com/512/2926/2926737.png";
+    foto = 0;
+    document.getElementById('Vamos').disabled = false;
+    document.getElementById('imagen1').className = "rounded-circle";
+    document.getElementById('Nuevafoto').value = '';
+    document.getElementById('imagen2').className = "img-thumbnail";
+    document.getElementById('fotovalida').style.display = "none";
+    document.getElementById('Vamos').innerHTML = "Ya elegiste tu avatar &#128040. Continuemos!"
+    document.getElementById('imagen3').className = "rounded-circle";
+    document.getElementById('imagen4').className = "rounded-circle";
+    document.getElementById('Nuevafoto').style.backgroundColor = "white";
+    document.getElementById('imagen6').className = "rounded-circle";
+document.getElementById('Adjfotografia').innerHTML = "&#129312 Cargar mi foto";
+    document.getElementById('imagen2').style.backgroundColor = "#63fd06";
 })
 document.getElementById('img3').addEventListener('click', function(){
     document.getElementById('imagenfinal').src="https://cdn-icons-png.flaticon.com/512/201/201634.png";
+    foto = 0;
+    document.getElementById('Vamos').disabled = false;
+    document.getElementById('imagen1').className = "rounded-circle";
+    document.getElementById('imagen3').className = "img-thumbnail";
+    document.getElementById('imagen2').className = "rounded-circle";
+    document.getElementById('Nuevafoto').value = '';
+    document.getElementById('Vamos').innerHTML = "Ya elegiste tu avatar &#128040. Continuemos!"
+    document.getElementById('imagen4').className = "rounded-circle";
+    document.getElementById('imagen6').className = "rounded-circle";
+    document.getElementById('fotovalida').style.display = "none";
+    document.getElementById('Nuevafoto').style.backgroundColor = "white";
+    document.getElementById('Adjfotografia').innerHTML = "&#129312 Cargar mi foto";
+    document.getElementById('imagen2').style.backgroundColor = "black";
+    document.getElementById('imagen3').style.backgroundColor = "#63fd06";
 })
 document.getElementById('img4').addEventListener('click', function(){
     document.getElementById('imagenfinal').src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png";
+    foto = 0;
+    document.getElementById('Vamos').disabled = false;
+    document.getElementById('imagen1').className = "rounded-circle";
+    document.getElementById('imagen4').className = "img-thumbnail";
+    document.getElementById('imagen3').className = "rounded-circle";
+    document.getElementById('Vamos').innerHTML = "Ya elegiste tu avatar &#128040. Continuemos!"
+    document.getElementById('imagen2').className = "rounded-circle";
+    document.getElementById('imagen6').className = "rounded-circle";
+    document.getElementById('Nuevafoto').value = '';
+    document.getElementById('Nuevafoto').style.backgroundColor = "white";
+    document.getElementById('imagen4').style.backgroundColor = "#63fd06";
+    document.getElementById('imagen2').style.backgroundColor = "black";
+    document.getElementById('fotovalida').style.display = "none";
+    document.getElementById('Adjfotografia').innerHTML = "&#129312 Cargar mi foto";
 })
 document.getElementById('img6').addEventListener('click', function(){
     document.getElementById('imagenfinal').src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png";
+    foto = 0;
+    document.getElementById('Vamos').disabled = false;
+    document.getElementById('imagen1').className = "rounded-circle";
+    document.getElementById('imagen6').className = "img-thumbnail";
+    document.getElementById('imagen3').className = "rounded-circle";
+    document.getElementById('Vamos').innerHTML = "Ya elegiste tu avatar &#128040. Continuemos!"
+    document.getElementById('imagen4').className = "rounded-circle";
+    document.getElementById('imagen2').className = "rounded-circle";
+    document.getElementById('Nuevafoto').value = '';
+    document.getElementById('Nuevafoto').style.backgroundColor = "white";
+    document.getElementById('imagen6').style.backgroundColor = "#63fd06";
+    document.getElementById('imagen2').style.backgroundColor = "black";
+    document.getElementById('Adjfotografia').innerHTML = "&#129312 Cargar mi foto";
+    document.getElementById('fotovalida').style.display = "none";
 })
 
 
@@ -171,9 +241,29 @@ document.getElementById('paso1').addEventListener('click', function(){
 
 /**boton adjuntar foto */
 document.getElementById('Adjfotografia').addEventListener('click', function(){
-
+    var largofoto = document.getElementById('Nuevafoto').value
+    if (largofoto.length == 0) {
+        document.getElementById('fotovalida').style.display = "block";
+    }
+    else {
+    document.getElementById('Adjfotografia').innerHTML = "&#128077";
     fotitonueva = document.getElementById('Nuevafoto').value; /**Guardo la URL */
     document.getElementById('imagenfinal').src = fotitonueva; /**Le agrego la URL al Img*/
+    document.getElementById('imagen1').className = "rounded-circle";
+    document.getElementById('fotovalida').style.display = "none";
+
+    document.getElementById('Nuevafoto').style.backgroundColor = "#b4fed3";
+    
+
+    document.getElementById('imagen2').className = "rounded-circle";
+    document.getElementById('imagen3').className = "rounded-circle";
+    document.getElementById('imagen4').className = "rounded-circle";
+    document.getElementById('imagen6').className = "rounded-circle";
+    document.getElementById('imagen2').style.backgroundColor = "black";
+    document.getElementById('Vamos').disabled = false;
+    document.getElementsByName('avatarcito').defaultChecked = true;
+    document.getElementById('Vamos').innerHTML = "Ya tenemos tu foto &#128248. Continuemos!"
+    }
 })
 
 
@@ -192,16 +282,54 @@ document.getElementById('Paso1a2').addEventListener('click', function(){
     /**Guardo y valido valores */
         Npersona = document.getElementById('Nombre').value;
         NApellido = document.getElementById('Apellido').value;
+        NNacionalidad = document.getElementById('nacionalidad').value;
         Nledicen = document.getElementById('comoledicen').value;
-        document.getElementById('Profesion').innerHTML = Nledicen;
+        
+            if (Nledicen.length == 0) { /**Compruebo que haya escrito algo */
+                document.getElementById('Profesion').style.display = "none";            
+            }
+            else{
+                document.getElementById('Profesion').style.display = "block";
+                document.getElementById('Profesion').innerHTML = Nledicen;
+            }
+        
         NCompleto = Npersona+' '+NApellido;
         document.getElementById('Titulo').innerHTML = NCompleto;
         NTDNI = document.getElementById('TipoDoc').value;
         NDNI = document.getElementById('DNI').value;
-        document.getElementById('ptipodni').innerHTML = NTDNI;
-        document.getElementById('PDNI').innerHTML = NDNI;
+        
+            /**Compruebo que haya escrito algo en NACIONALIDAD*/
+            if (NTDNI.length == 0) { 
+                document.getElementById('bloquenacionalidad').style.display = "none";            
+            }
+            else{
+                document.getElementById('bloquenacionalidad').style.display = "block";
+                document.getElementById('pnacionalidad').innerHTML = NNacionalidad;
+            }
+
+            /**Compruebo que haya escrito tipo y DNI */
+            if (NTDNI == 0 || NDNI == 0) {
+                document.getElementById('bloquedni').style.display = "none";
+            }
+            else {
+                document.getElementById('bloquedni').style.display = "block";
+                document.getElementById('ptipodni').innerHTML = NTDNI;
+                document.getElementById('PDNI').innerHTML = NDNI;
+            }
+
+        
         Nemail = document.getElementById('mail').value;
-        document.getElementById('pemial').innerHTML=Nemail;
+
+            /**Compruebo que haya escrito email */
+            if (Nemail.length == 0) {
+                document.getElementById('bloqueemail').style.display = "none";
+            }
+            else {
+                document.getElementById('bloqueemail').style.display = "block";
+                document.getElementById('pemial').innerHTML=Nemail;
+            }
+
+        
 
             /**El quilombito de la fecha de nacimiento */
             var datazo = document.getElementById('fecnacimiento');
@@ -209,17 +337,32 @@ document.getElementById('Paso1a2').addEventListener('click', function(){
             var anio = fecha.getFullYear();
             var mes = fecha.getMonth()+1;
             var dia = fecha.getDate()+1;
-            var fecdenaccom = dia + '-' + mes +'-'+anio;
-            document.getElementById('pnacimiento').innerHTML = fecdenaccom;
+                /**Valido la fecha de nacimiento */
+                if (Number.isNaN(anio) && Number.isNaN(mes) && Number.isNaN(dia)) {
+                    document.getElementById('bloquefechanacimiento').style.display = "none";
+                }
+                else {
+                    document.getElementById('bloquefechanacimiento').style.display = "block";
+                    var fecdenaccom = dia + '-' + mes +'-'+anio;
+                    document.getElementById('pnacimiento').innerHTML = fecdenaccom;
+                }
 
         /**Datos del celular Codpais Codarea Celular*/
         Ncelular = document.getElementById('Celular').value;
         Ncodpais = document.getElementById('Codpais').value;
         Ncodarea = document.getElementById('Codarea').value;
         NMovil = ' +'+ Ncodpais + ' (' + Ncodarea + ') ' + Ncelular;
-        document.getElementById('pnmovil').innerHTML = NMovil;
+            /**Valido el celular */
+                if (Ncelular.length == 0 || Ncodpais == 0 || Ncodarea == 0) {
+                    document.getElementById('bloquecelular').style.display = "none";
+                }
+                else {
+                    document.getElementById('bloquecelular').style.display = "block";
+                    document.getElementById('pnmovil').innerHTML = NMovil;
+                }
+        
 
-        /**DOmicilio _ Calle + ' N° ' + Altura + ' - ' + Ciudad + '(CP: '+CP+' - '+Provincia*/
+        /**Domicilio _ Calle + ' N° ' + Altura + ' - ' + Ciudad + '(CP: '+CP+' - '+Provincia*/
         NDomicilio = document.getElementById('Calle').value;
         NAltura = document.getElementById('Altura').value;
         NCiudad = document.getElementById('Ciudad').value;
@@ -229,6 +372,25 @@ document.getElementById('Paso1a2').addEventListener('click', function(){
         NdoCompletB = NCiudad+' (CP: '+NCodPod+') - '+NProv
         document.getElementById('pdomicilio').innerHTML = NdoCompletA
         document.getElementById('ploccpprov').innerHTML = NdoCompletB
+            /** Valido lo que puso en domicilio*/
+                if (NdoCompletA.length == 4 && NdoCompletB.length == 10) {
+                    document.getElementById('bloquedomicilio').style.display = "none";
+                }
+                else if (NdoCompletB.length == 10) { /**No puso datos de ciudad */
+                    document.getElementById('bloquedomicilio').style.display = "block"; 
+                    document.getElementById('bloquesolociudad').style.display = "none";
+                }
+                else if (NdoCompletA.length == 4) { /**No puso datos de calle */
+                    document.getElementById('bloquedomicilio').style.display = "block";
+                    document.getElementById('bloquesolocalle').style.display = "none";
+                }
+                else { /** Puso todo */
+                    document.getElementById('bloquedomicilio').style.display = "block";
+                    document.getElementById('bloquesolocalle').style.display = "block";
+                    document.getElementById('bloquesolociudad').style.display = "block";
+                }
+
+
 
         document.getElementById('collapseOne').style.display="none";
         colapso=0;
@@ -363,8 +525,14 @@ document.getElementById('Paso2a3').addEventListener('click', function(){
             var anio1 = fecha1.getFullYear();
             var mes1 = fecha1.getMonth()+1;
             var dia1 = fecha1.getDate()+1;
-            var fdesde1 = dia1 + '-' + mes1 +'-'+anio1;
-            
+            /** Quilombo para sacar que la fecha no sea Nan */
+            if (Number.isNaN(dia1) && Number.isNaN(mes1) && Number.isNaN(anio1)) {
+                document.getElementById('desdetrabajo1').style.display = "none";
+            }
+            else {
+                document.getElementById('desdetrabajo1').style.display = "block";
+                var fdesde1 = dia1 + '-' + mes1 +'-'+anio1;
+            }            
     
     if (DefHasta1 == 1) {
         NHasta1 = "Actualmente";
@@ -376,12 +544,20 @@ document.getElementById('Paso2a3').addEventListener('click', function(){
             var mes2 = fecha2.getMonth()+1;
             var dia2 = fecha2.getDate()+1;
             var fhasta1 = dia2 + '-' + mes2 +'-'+anio2;
-        
-        NHasta1 = 'Hasta :'+ fhasta1;
+            NHasta1 = 'Hasta: '+ fhasta1;
     }
+
+        if (Number.isNaN(dia2) && Number.isNaN(mes2) && Number.isNaN(anio2)) {
+            document.getElementById('hastatrabajo1').style.display = "none";
+        }
+        else {
+            document.getElementById('hastatrabajo1').style.display = "block";
+        } 
+
+
     NTarea1 = document.getElementById('Tarea1').value;
         /**Reflejar valores */
-        Ndesdecomplet1 = 'Desde:'+ fdesde1;
+        Ndesdecomplet1 = 'Desde: '+ fdesde1;
         
         document.getElementById('tareaempleo1').innerHTML = NTarea1;
         document.getElementById('puestotrabajo1').innerHTML = Ncargo1;
@@ -389,6 +565,14 @@ document.getElementById('Paso2a3').addEventListener('click', function(){
         document.getElementById('localidadtrabajo1').innerHTML = Nlocalidad1;
         document.getElementById('desdetrabajo1').innerHTML = Ndesdecomplet1;
         document.getElementById('hastatrabajo1').innerHTML = NHasta1;
+
+            /** varlidar que haya cargador trabajo 1 */
+            if (Ncargo1.length == 0) {
+                document.getElementById('bloquetrabajos').style.display = "none";
+            }
+            else {
+                document.getElementById('bloquetrabajos').style.display = "block";
+            }
 
     /**Carga de los demas empleos */
     Ncargo2 =  document.getElementById('Cargo2').value;
@@ -482,7 +666,7 @@ document.getElementById('Paso2a3').addEventListener('click', function(){
 
     /**Reflejar valores */
     Nhastacomplet4 = 'Hasta: '+ fhasta4;
-    Ndesdecomplet4 = 'Desde:'+ fdesde4;
+    Ndesdecomplet4 = 'Desde: '+ fdesde4;
     document.getElementById('tareaempleo4').innerHTML = NTarea4;
     document.getElementById('puestotrabajo4').innerHTML = Ncargo4;
     document.getElementById('Empleadortrabajo4').innerHTML = NEmpleador4;
@@ -555,6 +739,15 @@ document.getElementById('Listo').addEventListener('click', function(){
     document.getElementById('principal').style.display="none";
     document.getElementById('accordion').style.display="none";
     document.getElementById('Resultado').style.display="block";
+    var objpersonales = document.getElementById('objetivos').value;
+    /**Validar si puso algo en "sobre mi" */
+        if (objpersonales.length == 0) {
+            document.getElementById('bloquesobremi').style.display = "none";
+        }
+        else {
+            document.getElementById('bloquesobremi').style.display = "block";
+        }
+
     document.getElementById('sobremi').innerHTML = document.getElementById('objetivos').value;
     /**Carga de datos */
     NTituloestudio1 = '&#127891' + document.getElementById('Estudio1').value;
@@ -576,17 +769,41 @@ document.getElementById('Listo').addEventListener('click', function(){
          document.getElementById('pnacimiento').innerHTML = fecdenaccom;
 
          */
-         var prevdatanio1 = document.getElementById('HasAcade1');
-         let prevfecha1 = new Date(prevdatanio1.value);
-         var anioestudio1 = prevfecha1.getFullYear();
-         
+        var prevdatanio1 = document.getElementById('HasAcade1');
+        let prevfecha1 = new Date(prevdatanio1.value);
+        var anioestudio1 = prevfecha1.getFullYear();
+
 
         NHastaestudio1 = anioestudio1;
     }   
+        /** Valido fecha del 1er estudio */
+        if (Number.isNaN(NHastaestudio1)) {
+            NcomLocHasta1 = NLocalidadestudio1
+        }
+        else {
+            NcomLocHasta1 = NLocalidadestudio1+' - '+NHastaestudio1;
+        }
+
+            /**Termino de validar fecha y lugar */
+            if (NLocalidadestudio1.length == 0) {
+                document.getElementById('1erestudio').style.display = "none";
+            }
+            else {
+                document.getElementById('1erestudio').style.display = "block";
+            }
+
+
     NComTitEst1 = NTituloestudio1+' - '+NLugarestudio1;
-    NcomLocHasta1 = NLocalidadestudio1+' - '+NHastaestudio1;
+    
     document.getElementById('pestudio1').innerHTML = NComTitEst1;
     document.getElementById('pdatosest1').innerHTML = NcomLocHasta1;
+        /**Valido el Estudio 1*/
+            if (NTituloestudio1.length == 8) {
+                document.getElementById('bloqueestudio').style.display = "none";
+            }
+            else {
+                document.getElementById('bloqueestudio').style.display = "block";
+            }
 
 
     NTituloestudio2 =  '&#127891' + document.getElementById('Estudio2').value;
@@ -595,11 +812,27 @@ document.getElementById('Listo').addEventListener('click', function(){
     NComTitEst2 = NTituloestudio2+' - '+NLugarestudio2;
     document.getElementById('pestudio2').innerHTML = NComTitEst2;
             var prevdatanio2 = document.getElementById('HasAcade2');
-            let prevfecha2 = new Date(prevdatanio2.value)
+            let prevfecha2 = new Date(prevdatanio2.value);
             var anioestudio2 = prevfecha2.getFullYear();
             NHastaestudio2 = anioestudio2;
-    NcomLocHasta2 = NLocalidadestudio2+' - '+NHastaestudio2;
-    document.getElementById('pdatosest2').innerHTML = NcomLocHasta2;
+
+            /**Validar fecha del estudio */
+            if (Number.isNaN(NHastaestudio2)) {
+                NcomLocHasta2 = NLocalidadestudio2
+            }
+            else {
+                NcomLocHasta2 = NLocalidadestudio2+' - '+NHastaestudio2;
+            }
+
+                /**Termino de validar fecha y lugar */
+                if (NLocalidadestudio2.length == 0) {
+                    document.getElementById('2doestudio').style.display = "none";
+                }
+                else {
+                    document.getElementById('2doestudio').style.display = "block";
+                }
+            document.getElementById('pdatosest2').innerHTML = NcomLocHasta2;
+
 
     NTituloestudio3 =  '&#127891' + document.getElementById('Estudio3').value;
     NLugarestudio3 = document.getElementById('Instituto3').value;
@@ -610,8 +843,23 @@ document.getElementById('Listo').addEventListener('click', function(){
             let prevfecha3 = new Date(prevdatanio3.value)
             var anioestudio3 = prevfecha3.getFullYear();
             NHastaestudio3 = anioestudio3;
-    NcomLocHasta3 = NLocalidadestudio3+' - '+NHastaestudio3;
-    document.getElementById('pdatosest3').innerHTML = NcomLocHasta3;
+
+        /**Validar fecha del estudio */
+        if (Number.isNaN(NHastaestudio3)) {
+            NcomLocHasta3 = NLocalidadestudio3
+        }
+        else {
+            NcomLocHasta3 = NLocalidadestudio3+' - '+NHastaestudio3;
+        }
+
+            /**Termino de validar fecha y lugar */
+            if (NLocalidadestudio3.length == 0) {
+                document.getElementById('3erestudio').style.display = "none";
+            }
+            else {
+                document.getElementById('3erestudio').style.display = "block";
+            }
+        document.getElementById('pdatosest3').innerHTML = NcomLocHasta3;
   
 })
 
@@ -620,6 +868,7 @@ document.getElementById('cambiamos').addEventListener('click', function(){
     document.getElementById('cambiamos').style.display="none"
     document.getElementById('Bienvenida').innerHTML="Hagamos los cambios que necesites";
     document.getElementById('crearavatar').style.display="block";
+    document.getElementById('barranavegacion').style.display="none";
     document.getElementById('Resultado').style.display="none";
     document.getElementById('1raparte').style.display="block";
     document.getElementById('collapseOne').style.display="block";
@@ -627,6 +876,7 @@ document.getElementById('cambiamos').addEventListener('click', function(){
     document.getElementById('collapseTwo').style.display="none";
     document.getElementById('3raparte').style.display="none";
     document.getElementById('collapseThree').style.display="none";
+    document.getElementById('barranavegacion').style.display="none";
 })
 
 

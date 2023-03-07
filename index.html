@@ -40,7 +40,7 @@
             </div>
         </nav>
     </nav>
-    <div class="row">
+    <div id="campotitulo" class="row">
         <div class="col-sm-8"> 
             <h2 id="Bienvenida">Bienvenido! Crea tu propio CV con estilo profesional &#129299</h2>
         </div>
@@ -76,22 +76,22 @@
                 <div class="col-8" id="listaavatares">
                   
                     
-                    <img src="https://randomuser.me/api/portraits/lego/8.jpg" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
+                    <img id="imagen1" src="https://randomuser.me/api/portraits/lego/8.jpg" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
                     <input   type="radio" name="avatarcito" id="img1">
                 
                 
-                    <img src="https://cdn-icons-png.flaticon.com/512/2926/2926737.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
+                    <img id="imagen2" src="https://cdn-icons-png.flaticon.com/512/2926/2926737.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
                     <input  type="radio" name="avatarcito" id="img2">
                 
                 
-                    <img src="https://cdn-icons-png.flaticon.com/512/201/201634.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
+                    <img id="imagen3" src="https://cdn-icons-png.flaticon.com/512/201/201634.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
                     <input  type="radio" name="avatarcito" id="img3">
                 
                 
-                    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
+                    <img  id="imagen4" src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
                     <input  type="radio" name="avatarcito" id="img4">
                 
-                    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
+                    <img  id="imagen6" src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png" class="rounded-circle" alt="Cinque Terre" width="50px" height="50px">
                     <input  type="radio" name="avatarcito" id="img6">
                 
                 </div>
@@ -99,18 +99,20 @@
 
                 <div>
                     <h6>O puedes subir tu foto:</h6>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-4">
                         
-                        <input type="text" class="form-control" placeholder="Inserter URL de la imagen" id="Nuevafoto" >
-                        <button id="Adjfotografia" class="btn btn-success" type="button" >&#128206</button>
+                        <input type="text" class="form-control" placeholder="Inserte URL de la imagen" id="Nuevafoto" >
                         
+                        <button id="Adjfotografia" class="btn btn-success" type="button" >&#129312 Cargar mi foto  </button>
+
                     </div>
-                    
+                    <span id="fotovalida" class="badge rounded-pill bg-danger" style="display: none;">Debe insertar una URL válida</span>                    
+                    <br>
                 </div>
             </div>
         </form>
         <div class="d-grid">
-            <button type="button" class="btn btn-primary  " id="Vamos">¡Listo! Avatar seleccionado</button>
+            <button type="button" class="btn btn-primary" id="Vamos" disabled>Elige tu avatar (o sube una foto)</button>
         </div>
     </div>
     
@@ -151,6 +153,14 @@
                                                 <div class="input-group-text">Fecha de Nacimiento:</div>
                                             </div>
                                             <input type="date" class="form-control" id="fecnacimiento" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Nacionalidad:</div>
+                                            </div>
+                                            <input type="text" class="form-control" id="nacionalidad" >
                                         </div>
                                     </div>
                                     <div class="form-group col-md-12">
@@ -356,7 +366,7 @@
                                                 <div class="input-group-text">Descripción de tareas realizadas</div>
                                             </div>
                                         </div>
-                                        <textarea name="Tareas1" id="Tarea1" cols="80" rows="2"></textarea>
+                                        <textarea name="Tareas3" id="Tarea1" rows="2"></textarea>
                                         
                                     </div>
                                 </div>
@@ -421,7 +431,7 @@
                                         <div class="input-group-text">Descripción de tareas realizadas</div>
                                     </div>
                                 </div>
-                                <textarea name="Tareas2" id="Tarea2" cols="80" rows="2"></textarea>
+                                <textarea name="Tareas3" id="Tarea2" rows="2"></textarea>
                                 
                             </div>
                         </div>
@@ -485,7 +495,7 @@
                                         <div class="input-group-text">Descripción de tareas realizadas</div>
                                     </div>
                                 </div>
-                                <textarea name="Tareas3" id="Tarea3" cols="80" rows="2"></textarea>
+                                <textarea name="Tareas3" id="Tarea3"  rows="2"></textarea>
                                 
                             </div>
                         </div>
@@ -549,7 +559,7 @@
                                         <div class="input-group-text">Descripción de tareas realizadas</div>
                                     </div>
                                 </div>
-                                <textarea name="Tareas3" id="Tarea4" cols="80" rows="2"></textarea>
+                                <textarea name="Tareas3" id="Tarea4"  rows="2"></textarea>
                                 
                             </div>
                         </div>
@@ -581,7 +591,7 @@
                                 <div class="input-group-text">Realiza una descripción de tus aptitudes y objetivos</div>
                             </div>
                         </div>
-                        <textarea name="Tareas3" id="objetivos" cols="80" rows="5"></textarea>
+                        <textarea name="Tareas3" id="objetivos"  rows="5"></textarea>
                     </div>
                 </div>
                 <h1 id="espacio2"></h1>
@@ -790,19 +800,37 @@
                 <div class="container p-5 my-5 bg-primary text-white" >
                     <h3 class="" id="subtitulo">Datos Personales</h3>
                     <br>
-                    <h6 class="badge bg-dark">Fecha de Nacimiento:</h6>
-                    <h5 id="pnacimiento">123456</h5>
-                    <h6 id="ptipodni" class="badge bg-dark">DNI</h6>
-                    <h5 id="PDNI">123456</h5>
-                    <h6 class="badge bg-dark">Movil</h6>
-                    <h5 id="pnmovil" >1168162534</h5>
-                    <h6 class="badge bg-dark">e-mail</h6>
-                    <h5 id="pemial">nombre@gmail.com</h5>
-                    <h6 class="badge bg-dark">Domicilio</h6>
-                    <h5 id="pdomicilio">Deheza 1234 </h5>
-                    <h6 id="ploccpprov">Lanus (1824) - Buenos Aires</h6>
+                    <div id="bloquefechanacimiento">
+                        <h6 class="badge bg-dark">Fecha de Nacimiento:</h6>
+                        <h5 id="pnacimiento">123456</h5>
+                    </div>
+                    <div id="bloquenacionalidad">
+                        <h6 class="badge bg-dark">Nacionalidad:</h6>
+                        <h5 id="pnacionalidad">Argentino</h5>
+                    </div>
+                    <div id="bloquedni">
+                        <h6 id="ptipodni" class="badge bg-dark">DNI</h6>
+                        <h5 id="PDNI">123456</h5>
+                    </div>
+                    <div id="bloquecelular">
+                        <h6 class="badge bg-dark">Movil</h6>
+                        <h5 id="pnmovil" >1168162534</h5>
+                    </div>
+                    <div id="bloqueemail">
+                        <h6 class="badge bg-dark">e-mail</h6>
+                        <h5 id="pemial">nombre@gmail.com</h5>
+                    </div>
+                    <div id="bloquedomicilio">
+                        <h6 class="badge bg-dark">Domicilio</h6>
+                        <div id="bloquesolocalle">
+                            <h5 id="pdomicilio">Deheza 1234 </h5>
+                        </div>
+                        <div id="bloquesolociudad">
+                            <h6 id="ploccpprov">Lanus (1824) - Buenos Aires</h6>
+                        </div>
+                    </div>
                 </div>
-                <div class="container p-5 my-5 bg-success text-white">
+                <div id="bloqueestudio" class="container p-5 my-5 bg-success text-white">
                     <h3 id="subtitulo">Datos Académicos</h3>
                     <br>
                     <div id="1erestudio">
@@ -824,12 +852,12 @@
             <div class="col-8" id="informacionlaboral">
                 <br><br>
                 <div>
-                    <div class="container border">
+                    <div id="bloquesobremi" class="container border">
                         <h2 id="subtitulo">Sobre mí</h2>
                         <p id="sobremi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at diam non purus condimentum ultrices in vel dui. Vestibulum malesuada, neque et sagittis sagittis, mauris dolor lacinia dolor, eget sollicitudin augue nisi porta dui. Aenean venenatis placerat dapibus. Nam at nisi eget velit malesuada sagittis eget id ante. Ut ante massa, imperdiet ut diam suscipit, consequat pretium dui. Nunc ornare velit nulla, ac ullamcorper nibh finibus at. Quisque venenatis fringilla sapien a aliquet. Donec at semper leo. Pellentesque at eros iaculis tortor molestie tristique in eu leo. Donec vel vestibulum elit.</p>
                     </div>
                     <br>
-                    <div class="container border">
+                    <div id="bloquetrabajos" class="container border">
                         <br>   
                         <h2 id="subtitulo">Experiencia Laboral</h2>
                     <br>

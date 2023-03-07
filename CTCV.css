@@ -1,8 +1,15 @@
 #Bordes{
     border-top-right-radius: 40% 90% !important;
     border-bottom-right-radius: 40% 90% !important;
-    border-top-left-radius: 0% 0% !important;
+    border-top-left-radius: 0% hidden% !important;
     border-bottom-left-radius: 0% 0% !important;   
+}
+#campotitulo{
+    width: 100%;
+    overflow: hidden !important;
+}
+textarea{
+    width: 100%;
 }
 #Titulo{
     font-size: 40px;
