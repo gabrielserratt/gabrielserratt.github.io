@@ -739,6 +739,7 @@ document.getElementById('Listo').addEventListener('click', function(){
     document.getElementById('principal').style.display="none";
     document.getElementById('accordion').style.display="none";
     document.getElementById('Resultado').style.display="block";
+    document.getElementById('barranavegacion').style.display="none";
     var objpersonales = document.getElementById('objetivos').value;
     /**Validar si puso algo en "sobre mi" */
         if (objpersonales.length == 0) {
